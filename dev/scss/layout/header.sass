@@ -1,0 +1,64 @@
+.container
+  @media  (min-width: 1280px)
+    width: 1200px
+.header
+  background: #95a014
+  font-weight: 300
+  font-style: normal
+  min-height: 75px
+  &.fixed
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    z-index: 1000
+    width: 100%
+  .navbar-brand
+    padding: 16px 0 0 13px
+  .navbar-toggle
+    margin-top: 20px
+    .icon-bar
+      background: #ffffff
+  .navbar
+    min-height: 10px
+    margin-bottom: 0
+    border-radius: 0
+    border: none
+  .nav>li
+    > a
+      font-size: 14px
+      padding: 0
+      color: #ffffff
+      text-transform: uppercase
+      text-decoration: none
+      &:hover
+        color: #fcff00
+        background: none
+    &.active
+      > a
+        color: #fcff00
+
+  .navbar-nav
+    margin-left: 63px
+    margin-top: 27px
+  .nav
+    > li
+      margin-right: 24px
+  &__phone
+    font-size: 24px
+    font-weight: 300
+    font-style: normal
+    color: #ffffff
+    letter-spacing: 0.6px
+    text-decoration: none
+    line-height: 75px
+    span
+      color: #fcff00
+      font-weight: normal
+      font-style: normal
+    &:hover
+      color: #ffffff
+    @media (max-width: 800px)
+      font-size: 16px
+      text-align: center
+      line-height: 30px

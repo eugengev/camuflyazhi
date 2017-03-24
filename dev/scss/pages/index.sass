@@ -1,0 +1,862 @@
+@media (max-width: 800px)
+  .main
+    overflow: hidden
+
+.top-slider
+  min-height: 887px
+  @media (max-width: 1023px)
+    min-height: 500px
+  background: url(../images/slider-top.jpg) no-repeat center bottom
+  &__share
+    background: rgba(#000, 0.70)
+    padding-top: 25px
+    padding-bottom: 23px
+  &__title
+    letter-spacing: -0.8px
+    color: #fcff00
+    font-size: 36.53px
+    text-align: center
+    font-weight: 300
+    position: relative
+    font-style: normal
+    &:before, &:after
+      content: ''
+      height: 1px
+      background: #9d9a8c
+      display: inline-block
+      width: 15%
+      max-width: 122px
+      position: absolute
+      top: 50%
+      transform: translate (0, -50%)
+    &:before
+      left: 0
+    &:after
+      right: 0
+    @media (max-width: 800px)
+      font-size: 26px
+      &:before, &:after
+        display: none
+  &__timer
+    letter-spacing: 0.6px
+    padding-top: 14px
+    color: #ffffff
+    font-weight: 300
+    font-style: normal
+    font-size: 18px
+    text-align: center
+    span
+      font-style: normal
+      color: #fcff00
+      font-size: 24px
+    @media (max-width: 800px)
+      font-size: 12px
+      span
+        font-size: 16px
+        
+.slide-costum
+  padding-top: 40px
+  overflow: hidden
+  position: relative
+  height: 730px
+  @media (max-width: 1023px)
+    height: 100vh
+  padding-bottom: 60px
+  .slick-arrow
+    position: absolute
+    top: 50%
+    margin-top: -35px
+    width: 70px
+    height: 70px
+    border: none
+    z-index: 1100
+    text-indent: -99999px
+    &.slick-next
+      right: 0
+      background: url(../images/prev.png) no-repeat
+    &.slick-prev
+      left: 0
+      background: url(../images/next.png) no-repeat
+  &__item
+    text-align: center
+    float: left
+    position: relative
+    height: 630px
+    @media (max-width: 1023px)
+      height: 80vh
+    vertical-align: bottom
+    @media (min-width: 1034px)
+      &:before
+        display: inline-block
+        height: 630px
+        content: ''
+        vertical-align: bottom
+        display: none
+    &_img
+      transform: scale(0.85)
+      transform-origin: bottom
+      transition: transform 0.3s ease
+      @media (max-width: 1023px)
+        max-height: 100%
+    .item-info
+      display: none
+    &.slick-current.slick-center
+      .slide-costum__item_img
+        transform: scale(1)
+        transition: transform 0.3s ease
+      .item-info
+        display: block
+        position: absolute
+        width: 300px
+        padding: 17px 15px
+        left: 77%
+        bottom: 36px
+        z-index: 200
+        text-align: left
+        font-size: 16px
+        color: #ffffff
+        background: rgba(#000, 0.7)
+        @media (max-width: 800px)
+          left: 50%
+          right: auto
+          transform: translate(-50%, 0)
+        &__title
+          font-size: 18px
+          color: #fcff00
+          padding-bottom: 15px
+          span
+            display: block
+            font-size: 16px
+            color: #ffffff
+            font-style: italic
+            font-weight: 100
+        &__desc
+          padding-bottom: 15px
+        &__price
+          font-size: 24px
+          color: #fcff00
+          padding-bottom: 20px
+        .btn-podro
+          margin-bottom: 10px
+
+.nav-costum
+  overflow: hidden
+  &__item
+    float: left
+    span
+      text-indent: -99999px
+      display: inline-block
+      width: 100%
+      height: 4px
+      border: none
+      cursor: pointer
+      margin-top: 9px
+      margin-bottom: 7px
+      background: rgba(#fff, 0.5)
+    &.slick-current.slick-active
+      span
+        height: 20px
+        margin-top: 0
+        margin-bottom: 0
+        background: #9ba316
+        border-radius: 5px
+
+.slick-dots
+  display: table
+  width: 100%
+  position: absolute
+  left: 15px
+  right: 15px
+  bottom: 0
+  li
+    padding: 0
+    margin: 0
+    vertical-align: middle
+    height: 20px
+    list-style: none
+    display: table-cell
+    button
+      text-indent: -99999px
+      display: inline-block
+      width: 100%
+      height: 4px
+      border: none
+      margin-top: 9px
+      margin-bottom: 7px
+      background: rgba(#fff, 0.5)
+    &.slick-active
+      button
+        height: 20px
+        margin-top: 0
+        margin-bottom: 0
+        background: #9ba316
+        border-radius: 5px
+
+.btn-podro, a.btn-podro
+  display: inline-block
+  height: 50px
+  background: none
+  font-size: 18px
+  font-weight: 300
+  text-align: center
+  line-height: 44px
+  text-decoration: none
+  color: #ffffff
+  border: #fcff00 solid 1px
+  min-width: 270px
+
+
+.btn-order
+  display: inline-block
+  height: 50px
+  background: #9ba316
+  font-size: 18px
+  font-weight: 300
+  text-align: center
+  line-height: 44px
+  text-decoration: none
+  color: #ffffff
+  border: #9ba316 solid 1px
+  min-width: 270px
+
+.info-block
+  background: url(../images/camuflag-bg.png) no-repeat
+  background-size: cover
+  padding-top: 80px
+  padding-bottom: 70px
+  @media (max-width: 800px)
+    padding-top: 40px
+    padding-bottom: 40px
+  &__item
+    text-align: center
+    font-size: 14px
+    color: #000000
+    font-weight: 300
+    margin-bottom: 20px
+    .wrap-img
+      height: 135px
+      @media (max-width: 800px)
+        height: 100px
+
+.secondblock
+  padding-top: 51px
+  text-align: center
+  color: #4c4c4c
+  font-weight: 300
+  font-size: 18px
+  h2
+    font-weight: 300
+    font-size: 30px
+    text-transform: uppercase
+    padding-bottom: 20px
+    span
+      color: #9ba316
+  &__text
+    padding-bottom: 62px
+    background: url(../images/secondblock-text-bg.png) no-repeat center 71%
+  &__item:nth-last-child(1)
+    .secondblock__text
+      background: none
+
+.tkani_block
+  padding-top: 35px
+  position: relative
+  padding-bottom: 35px
+  background: url(../images/tkani-bg.png)
+  .slick-arrow
+    position: absolute
+    top: 50%
+    margin-top: -35px
+    width: 70px
+    height: 70px
+    border: none
+    z-index: 1100
+    border-radius: 50%
+    text-indent: -99999px
+    &.slick-next
+      right: 0
+      background: url(../images/prev.png) no-repeat #ccc
+    &.slick-prev
+      left: 0
+      background: url(../images/next.png) no-repeat #ccc
+  .container
+    border: #aaaaaa dashed 2px
+    border-bottom: #4c4c4c dashed 1px
+    border-top: #4c4c4c dashed 1px
+    @media  (max-width: 500px)
+      border: none
+  h2
+    font-size: 36px
+    font-weight: 300
+    color: #4c4c4c
+    text-align: center
+    position: absolute
+    top: 20px
+    left: 50%
+    transform: translate(-50%,0)
+    background: url(../images/tkani-bg.png) center
+    z-index: 5
+    display: inline-block
+    padding-left: 15px
+    padding-right: 15px
+    text-transform: uppercase
+    @media  (max-width: 500px)
+      font-size: 24px
+      left: 0
+      right: 0
+      transform: translate(0,0)
+  .slick-dots
+    position: relative
+    left: auto
+    right: auto
+    padding-left: 15px
+    padding-right: 15px
+    bottom: auto
+    li
+      button
+        background: #9f9f9f
+      &.slick-active
+        button
+          background: #9ba316
+  .row
+    position: relative
+    &:after
+      content: ''
+      display: inline-block
+      @include sprite($needle3)
+      position: absolute
+      right: 45px
+      top: -20px
+      @media  (max-width: 500px)
+        display: none
+    &:before
+      content: ''
+      display: inline-block
+      @include sprite($scissors)
+      position: absolute
+      left: 45px
+      top: -20px
+      @media  (max-width: 500px)
+        display: none
+  &__slider
+    position: relative
+    padding: 18px 0
+    overflow: hidden
+    @media (max-width: 800px)
+      padding-top: 80px
+    &__item
+      float: left
+      text-align: center
+      height: 400px
+      position: relative
+      vertical-align: middle
+      @media (max-width: 800px)
+        height: 350px
+        img
+          max-height: 100%
+      @media  (max-width: 500px)
+        opacity: 0
+      &-img
+        position: relative
+        display: inline-block
+        &:after
+          position: absolute
+          content: ''
+          top: 0
+          left: 0
+          right: 0
+          display: block
+          height: 100%
+          border-radius: 50%
+          background-color: rgba(76, 76, 76, 0.502)
+      &:before
+        display: inline-block
+        content: ''
+        height: 100%
+        vertical-align: middle
+        @media (max-width: 800px)
+          display: none
+      &-title
+        font-size: 18px
+        color: #000000
+        display: inline-block
+        width: 100%
+        position: absolute
+        bottom: 40px
+        left: 0
+        right: 0
+      img
+        max-width: 230px
+        border-radius: 50%
+        border: #d7dbc2 solid 10px
+        transition: all 0.3s ease
+      &.slick-center
+        opacity: 1
+        .tkani_block__slider__item-img
+          display: unset
+          &:after
+            display: none
+        img
+          max-width: 90%
+          border-color: #ffd118
+          transition: all 0.3s ease
+        .tkani_block__slider__item-title
+          display: none
+  &__slider-info
+    padding-top: 9px
+    padding-left: 15px
+    padding-right: 11px
+    padding-bottom: 17px
+    overflow: hidden
+    &__item
+      float: left
+    &__title
+      font-weight: 300
+      color: #000000
+      font-size: 30px
+      text-align: center
+      padding-bottom: 26px
+    &__desc
+      padding-left: 5px
+      padding-right: 5px
+      text-align: center
+      font-size: 18px
+      color: #000000
+      padding-bottom: 24px
+    &__sostav
+      font-weight: 300
+      line-height: 55px
+      font-size: 22px
+      color: #ffffff
+      text-align: center
+      background: rgba(#000, 0.5)
+      @media (max-width: 800px)
+        line-height: normal
+        font-size: 18px
+
+.contatc_block
+  position: relative
+  @media  (max-width: 800px)
+    background: rgba(#000, 0.7)
+  &__map
+    position: absolute
+    z-index: 4
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    @media  (max-width: 800px)
+      position: relative
+      left: auto
+      right: auto
+      top: auto
+      bottom: auto
+      height: 300px
+  &__title
+    text-align: center
+    background: rgba(#000, 0.7)
+    z-index: 5
+    position: relative
+    padding: 29px 0 35px
+    font-weight: 300
+    color: #ffffff
+    font-size: 16px
+    .yellow
+      color: #fcff00
+    h2
+      font-size: 36.3px
+      color: #fcff00
+      font-weight: 300
+      padding-bottom: 18px
+      &:before
+        display: inline-block
+        content: ''
+        width: 131px
+        height: 1px
+        margin-right: 15px
+        background: #a3a3a2
+        transform: translate(0, -13px)
+        @media (max-width: 500px)
+          display: none
+      &:after
+        display: inline-block
+        content: ''
+        width: 131px
+        height: 1px
+        margin-left: 15px
+        background: #a3a3a2
+        transform: translate(0, -13px)
+        @media (max-width: 500px)
+          display: none
+.contact-form
+  position: relative
+  z-index: 5
+  max-width: 430px
+  width: 100%
+  float: right
+  background: rgba(#000, 0.7)
+  padding: 33px 15px 30px
+  margin-right: 70px
+  margin-top: 22px
+  margin-bottom: 24px
+  @media  (max-width: 800px)
+    margin-left: auto
+    margin-right: auto
+    margin-top: 0
+    float: none
+    background: none
+  @media  (max-width: 500px)
+    padding-left: 0
+    padding-right: 0
+  &__title
+    font-size: 24px
+    font-weight: 300
+    text-align: center
+    position: relative
+    color: #fcff00
+    &:before
+      position: absolute
+      display: inline-block
+      content: ''
+      width: 60px
+      height: 1px
+      left: 0
+      top: 15px
+      background: #a3a3a2
+      @media  (max-width: 500px)
+        display: none
+    &:after
+      position: absolute
+      display: inline-block
+      content: ''
+      width: 60px
+      height: 1px
+      right: 0
+      top: 15px
+      background: #a3a3a2
+      @media  (max-width: 500px)
+        display: none
+  &__desc
+    font-weight: 300
+    font-size: 18px
+    padding-top: 10px
+    padding-bottom: 10px
+    color: #ffffff
+    text-align: center
+  &__form
+    display: block
+    padding-left: 15px
+    padding-right: 15px
+    padding-top: 11px
+    &__row
+      height: 55px
+      border: #fdff45 solid 1px
+      margin-bottom: 14px
+      position: relative
+      padding-left: 55px
+      input
+        border: none
+        background: none
+        width: 100%
+        height: 55px
+        color: #ffffff
+        font-size: 18px
+      &.name:before
+        content: ''
+        +block_center
+        @include sprite($name-icon)
+        left: 28px
+      &.email:before
+        content: ''
+        +block_center
+        @include sprite($email-icon)
+        left: 28px
+      &.phone:before
+        content: ''
+        +block_center
+        @include sprite($phone-icon)
+        left: 28px
+    &__area
+      border: #fdff45 solid 1px
+      margin-bottom: 14px
+      position: relative
+      textarea
+        resize: none
+        background: none
+        width: 100%
+        padding: 20px 15px
+        height: 190px
+        border: none
+        color: #ffffff
+        font-size: 18px
+  &__submit
+    height: 55px
+    background: #9ba316
+    text-align: center
+    font-size: 18px
+    font-weight: 300
+    text-transform: uppercase
+    display: block
+    border: none
+    color: #ffffff
+    width: 100%
+.deliver-block
+  padding: 37px 0 0
+  &__item
+    position: relative
+    margin-bottom: 37px
+    &.deliver
+      background: #616b82
+    &.oplata
+      background: #9ba316
+    &.catalog
+      background: #d67658
+    img
+      width: 100%
+  &__title
+    line-height: 56px
+    background: rgba(#000, 0.7)
+    text-align: center
+    font-size: 22px
+    color: #ffffff
+    font-weight: 300
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+  &__desc
+    height: 193px
+    padding: 22px 25px
+    text-align: center
+    font-size: 18px
+    font-weight: 300
+    color: #ffffff
+    @media  (max-width: 500px)
+      height: auto
+  &__form-row
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"]
+      display: block
+      width: 100%
+      height: 50px
+      background: none
+      border: #fff solid 1px
+      text-align: center
+      color: #ffffff
+      margin-bottom: 9px
+    input[type="submit"]
+      display: block
+      width: 100%
+      height: 50px
+      background: #9f3514
+      border: #9f3514 solid 1px
+      text-align: center
+      color: #ffffff
+
+.rewiev
+  background: url("../images/rewiev-bg.jpg") no-repeat
+  padding: 69px 0 40px
+  @media (max-width: 500px)
+    background-size: auto 100%
+  &__title
+    font-weight: 300
+    font-size: 36.3px
+    color: #fcff00
+    text-align: center
+    transform: translateY(-21px)
+    padding-bottom: 37px
+    margin-bottom: 17px
+    background: url(../images/rewiev-circle.png) no-repeat center bottom
+  &__block
+    background: url(../images/rewiev-ramka.png) no-repeat center top
+    background-size: 100% 100%
+    max-width: 1033px
+    margin-left: auto
+    margin-right: auto
+    @media (max-width: 500px)
+      background: none
+  &__slide
+    position: relative
+    .slick-arrow
+      content: ''
+      position: absolute
+      top: 50px
+      display: inline-block
+      text-indent: -99999px
+      background: none
+      border: none
+      z-index: 1100
+      &.slick-prev
+        @include sprite($rewiev-prev)
+        left: -70px
+      &.slick-next
+        @include sprite($rewiev-next)
+        right: -70px
+    .slick-list
+      overflow: hidden
+  &__item
+    padding-left: 75px
+    padding-right: 75px
+    text-align: center
+    font-weight: 300
+    font-size: 17.89px
+    color: #ffffff
+    float: left
+    @media (max-width: 500px)
+      padding-left: 0
+      padding-right: 0
+  &__name
+    text-align: center
+    font-weight: 300
+    font-size: 17.75px
+    margin-top: 25px
+    padding-bottom: 40px
+    &:before
+      content: ''
+      display: block
+      max-width: 370px
+      margin-left: auto
+      margin-right: auto
+      height: 1px
+      background: #ffffff
+      opacity: 0.5
+      margin-bottom: 23px
+
+.kostum
+  padding-bottom: 64px
+  .nav-costum__item
+    span
+      background: #b6b6b6
+  .col-md-4
+    img
+      max-width: 100%
+  &__title
+    font-size: 36px
+    color: #fcff00
+    line-height: 36px
+    background: #4c4c4c
+    text-align: center
+    padding: 26px 0
+    font-weight: 300
+    margin-bottom: 45px
+  &__razmer
+    font-size: 24.26px
+    line-height: 36px
+    color: #000000
+    font-weight: 300
+    vertical-align: text-bottom
+    span
+      color: #9ba316
+      font-size: 36.93px
+      font-weight: normal
+      display: inline-block
+      padding-left: 11px
+  &__table
+    overflow: auto
+    padding-bottom: 15px
+    &-name
+      padding-top: 5px
+      font-weight: 300
+      color: #000000
+      font-size: 18px
+    table
+      td, th
+        border: #fff solid 1px
+        height: 46px
+        padding: 0 12px
+        font-weight: 300
+        font-size: 16px
+        color: #000000
+        vertical-align: middle
+        background: #e9e9e9
+        width: 16.6%
+        @media  (max-width: 500px)
+          font-size: 12px
+          padding: 0
+          text-align: center
+      th
+        color: #ffffff
+        background: #b6b6b6
+      tr:hover
+        td
+          background: #f7f8e0
+    .slick-current.slick-active
+      td
+        background: #f7f8e0
+
+  &__form
+    padding-top: 24px
+    &-title
+      font-weight: 300
+      font-size: 24px
+      color: #000000
+      padding-bottom: 14px
+    &-row
+      margin-bottom: 31px
+      height: 45px
+    select, input[type="text"], input[type="tel"], input[type="email"]
+      height: 45px
+      background: #ffffff
+      border: #b6b6b6 solid 1px
+      width: 100%
+      padding-left: 13px
+      padding-right: 13px
+      display: block
+      font-size: 18px
+      font-weight: 300
+      &:focus
+        border: #9ba316 solid 1px
+    &-submit
+      input
+        display: block
+        width: 100%
+        height: 70px
+        background: #9ba316
+        border: none
+        font-weight: 300
+        color: #ffffff
+        cursor: pointer
+        font-size: 22px
+
+.slider-color
+  position: relative
+  .slick-track
+    float: left 
+  .slick-arrow
+    text-indent: -9999px
+    background: none
+    display: inline-block
+    border: none
+    top: 12px
+    position: absolute
+    &.slick-prev
+      left: 0px
+      @include sprite($color-prev)
+    &.slick-next
+      right: 0px
+      @include sprite($color-next)
+  .slick-list
+    margin-left: 20px
+    margin-right: 20px
+    overflow: hidden
+
+  &__item
+    position: relative
+    float: left
+    width: 49px
+    height: 48px
+    img
+      border-radius: 3px
+      border: #fff solid 3px
+    &.slick-active.slick-center
+      img
+        border: #ffd118 solid 3px
+        border-radius: 3px
+
+        
+.js-size-slider
+  overflow: hidden
+  height: 285px
+  .item
+    float: left

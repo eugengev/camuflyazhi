@@ -1,0 +1,40 @@
+.footer
+  background: url(../images/footer-bg.jpg)
+  font-size: 16px
+  color: #ffffff
+  &__logo
+    padding: 20px 17px 20px 0
+    float: left
+  &__copyright
+    line-height: 68px
+    float: left
+  &__top
+    padding-top: 10px
+    float: right
+    display: inline-block
+    &:before
+      content: ''
+      display: inline-block
+      @include sprite($to-top)
+  &__soc
+    padding-left: 15px
+    padding-top: 19px
+    a
+      display: inline-block
+      width: 30px
+      height: 30px
+      border: #b9b9b9 solid 1px
+      border-radius: 6px
+      margin-right: 7px
+      position: relative
+      &:before
+        content: ''
+        +block_center
+    &-vk:before
+      @include sprite($vk)
+    &-fb:before
+      @include sprite($fb)
+    &-tw:before
+      @include sprite($tw)
+    &-ins:before
+      @include sprite($ins)
