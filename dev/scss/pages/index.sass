@@ -140,26 +140,24 @@
           margin-bottom: 10px
 
 .nav-costum
-  overflow: hidden
-  &__item
-    float: left
-    span
-      text-indent: -99999px
-      display: inline-block
-      width: 100%
-      height: 4px
-      border: none
-      cursor: pointer
-      margin-top: 9px
-      margin-bottom: 7px
-      background: rgba(#fff, 0.5)
-    &.slick-current.slick-active
-      span
-        height: 20px
-        margin-top: 0
-        margin-bottom: 0
-        background: #9ba316
-        border-radius: 5px
+  display: block
+  height: 5px
+  border: none
+  cursor: pointer
+  margin-top: 9px
+  border-radius: 5px
+  margin: 25px 25px
+  background: #b6b6b6
+  position: relative
+  .ui-slider-handle
+    position: absolute
+    top: -8px
+    height: 20px
+    background: #9ba316
+    border-radius: 5px
+    width: 50px
+    margin-left: -25px
+    display: inline-block
 
 .slick-dots
   display: table
@@ -784,7 +782,10 @@
     .slick-current.slick-active
       td
         background: #f7f8e0
-
+  .item
+    &.active
+      td
+        background: #f7f8e0
   &__form
     padding-top: 24px
     &-title
@@ -858,5 +859,7 @@
 .js-size-slider
   overflow: hidden
   height: 285px
-  .item
-    float: left
+  position: relative
+  &-inner
+    position: relative
+    top: 0

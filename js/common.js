@@ -69,6 +69,7 @@ $(function() {
 
     $('.js-costum-nav').slick(costum_nav_option);
 */
+/*
     var size_option = {
         infinite: false,
         dots: false,
@@ -103,7 +104,7 @@ $(function() {
     };
 
     $('.js-size-nav').slick(size_nav_option);
-
+*/
     var tkani_option = {
         infinite: true,
         dots: true,
@@ -183,6 +184,53 @@ $(function() {
         ]
     };
     $('.js-color-init').slick(color_option);
+
+
+   var sliderSize = $( ".js-size-nav" ).slider({
+        min: 46,
+        max: 58,
+        step: 2,
+        slide: function( event, ui ) {
+            $( "#js-show-size" ).text( ui.value );
+            var sizeChose = ui.value,
+                minusTop = 0,
+                topHeigth = 0,
+                heightTab = $('.js-size-slider').height();
+            $('.item.active').removeClass('active');
+            $('.js-size').each(function(){
+                if ($(this).text() == sizeChose) {
+                    console.log($(this).parents('.item').position().top, heightTab);
+                    topHeigth = $(this).parents('.item').position().top + $(this).parents('.item').height();
+                    if (heightTab < topHeigth) {
+                        minusTop = heightTab - topHeigth;
+                    } else {
+                        minusTop = 0;
+                    }
+                    $('.js-size-slider-inner').css('top',minusTop);
+                    $(this).parents('.item').addClass('active')
+                }
+            });
+        }
+   });
+   $('.js-size-slider .item').click(function(){
+       var self = $(this),
+           size = self.find('.js-size').text();
+       $('.item.active').removeClass('active');
+       sliderSize.slider( "value", size );
+       $(this).addClass('active');
+       $( "#js-show-size" ).text( size );
+
+       var minusTop = 0,
+           topHeigth = 0,
+           heightTab = $('.js-size-slider').height();
+       topHeigth = $(this).next('.item').position().top + $(this).next('.item').height();
+       if (heightTab < topHeigth) {
+           minusTop = heightTab - topHeigth;
+       } else {
+           minusTop = 0;
+       }
+       $('.js-size-slider-inner').css('top',minusTop);
+   });
 
 });
 
